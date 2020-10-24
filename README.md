@@ -2,7 +2,7 @@
 
 Simple website using flask to track live covid19_data
 
-## Installation
+## Installation & Requirements
 create virtual environment using virtualenv
 
 ```bash
