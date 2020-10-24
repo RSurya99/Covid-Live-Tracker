@@ -1,6 +1,6 @@
 # Covid Live Tracker
 
-Simple website using flask to track live covid19_data
+Simple website using flask to track covid19
 
 ## Installation & Requirements
 create virtual environment using virtualenv
