@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+}
+section{
+    padding: 50px;
+}
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url('../img/Landing-page2.png');
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 220px;
+
+    .contentBx{
+        margin-right: 100px;
+        padding-right: 100px;
+
+        h1{
+            color: #FFF;
+            font-size: 4rem;
+            font-weight: 600;
+        }
+
+        p{
+            color: #FFF;
+            text-align: justify;
+            font-size: 1.1rem;
+            font-weight: 300;
+            font-style: italic;
+        }
+    }
+
+    .imgBx .img{
+        margin-right: 50px;
+        width: 350px;
+    }
+
+    .w50{
+        min-width: 50%;
+    }
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 50px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+
+    a{
+        text-decoration: none;
+        color: #FFF;
+        font-size: 1.4rem;
+        font-weight: 400;
+
+        i{
+            font-size: 1.8rem;
+        }
+
+        span{
+            &:hover{
+                color: darken(#FFF, 10%);
+            }
+        }
+    }
+
+    ul{
+        position: relative;
+        display: flex;
+        list-style-type: none;
+
+        li{
+            a{
+                position: relative;
+                display: inline-block;
+                margin: 0 30px;
+                font-size: 1.4rem;
+                color: #FFF;
+                text-decoration: none;
+                font-weight: 400;
+                transition: 0.6s;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+header.sticky{
+    background: rgb(66, 77, 173);
+    padding: 20px 50px;
+}
+
+header ul li a:hover,
+header.sticky ul li a:hover,
+header ul li a.active,
+header.sticky ul li a.active{
+    border-bottom: 1px solid darken(#FFF, 5%);
+    color: darken(#FFF, 5%);
+}
+.live-track{
+    min-height: 550px;
+    .heading{
+        position: relative;
+        align-items: center;
+        text-align: center;
+        h1{
+            font-size: 3rem;
+            color: #333;
+            font-weight: 700;
+        }
+    }
+    .statistic{
+        padding: 50px;
+        color: #FFF;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        .card{
+            position: relative;
+
+            .face{
+                position: relative;
+                width: 300px;
+                height: 200px;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.7);
+                transition: 0.5s;
+
+                .content{
+                    text-align: center;
+                    h4{
+                        font-size: 1.5rem;
+                        opacity: 0.7;
+                        transition: 0.5s;
+                        margin-bottom: 10px;
+                        font-weight: 500;
+                    }
+                    h2{
+                        font-size: 2.8rem;
+                        opacity: 0.9;
+                        transition: 0.5s;
+                    }
+                }
+
+                &:hover{
+                    transform: translateY(-10px);
+                    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+                    .content{
+                        h4{
+                            opacity: 1;
+                        }
+                        h2{
+                            opacity: 1;
+                        }
+                    } 
+                }
+            }
+            .confirmed{
+                background: linear-gradient(to right, rgb(44, 52, 125) 0%, rgb(66, 76, 166) 100%);
+            }
+            .deaths{
+                background: linear-gradient(to right, rgb(131, 41, 41) 0%, rgb(179, 38, 38) 100%);
+            }
+            .recovered{
+                background: linear-gradient(to right, rgb(49, 150, 91) 0%, rgb(39, 188, 102) 100%);
+            }
+        }
+    }
+}

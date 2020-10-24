@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% include 'header.html' %}
+{% block title %} PICOVID HOME {% endblock %}
+
+{% block body %}
+<section class="banner">
+    <div class="contentBx w50">
+        <h1>Lockdown</h1>
+        <p>A lockdown is a requirement for people to stay where they are, usually due to specific risks to
+            themselves or to others if they can move freely. The term "stay-at-home" or "shelter-in-place" is often
+            used for lockdowns that affect an area, rather than specific locations.</p>
+    </div>
+    <div class="imgBx">
+        <div class="w50">
+            <img src="{{ url_for('static', filename='img/coronavirus2.png') }}" class="img" alt="">
+        </div>
+    </div>
+</section>
+<section class="live-track">
+    <div class="heading">
+        <h1>COVID-19 LIVE STATISTIC</h1>
+    </div>
+    <div class="statistic">
+        <div class="card">
+            <div class="face confirmed">
+                <div class="content">
+                    <h4>CONFIRMED CASES</h4>
+                    <h2>{{ '{0:,}'.format(data.Confirmed) }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face deaths">
+                <div class="content">
+                    <h4>DEATHS</h4>
+                    <h2>{{ '{0:,}'.format(data.Deaths) }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face recovered">
+                <div class="content">
+                    <h4>RECOVERED</h4>
+                    <h2>{{ '{0:,}'.format(data.Recovered) }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
