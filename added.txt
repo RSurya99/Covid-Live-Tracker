@@ -2,3 +2,4 @@
  Adding Graphics for data
  Add filter by date
  Change data from covid19_data to another global rest api
+ add filter by country
